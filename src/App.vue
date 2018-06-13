@@ -2,7 +2,7 @@
   <main>
     <div id="app"/>
       <section>
-        <MainPage :cities='cities'></MainPage>
+        <MainPage :load='load' :cities='cities'></MainPage>
       </section>
     </main>
 </template>
@@ -19,6 +19,7 @@ export default {
   data (){
     return {
       cities: [],
+      id: [],
       apiURL: 'http://localhost:3000/cities',
     }
   },
@@ -33,34 +34,15 @@ export default {
       })
       .then(cities => {
         this.cities = cities
-        // console.log(this.cities, "cities app")
       })
       .catch(err => {
         console.log.err
       })
   },
-  deleteCities(){
-  let objectData = new FormData(form)
-  return fetch('https://warm-caverns-30232.herokuapp.com/cities/id', {
-    method: 'DELETE',
-    headers: new Headers({
-      "Content-Type":'application/json'
-    }),
-    body: JSON.stringify({
-      data: {
-        city: objectData.get ('city'),
-        trip_length: objectData.get ('trip_length'),
-        restaurants: objectData.get ('restaurants'),
-        activities: objectData.get ('activities')
-      }
-    })
-  })
-  .then(function(response){
-    return response.json()
-  })
+
 }
   }
-}
+
 </script>
 
 <style>

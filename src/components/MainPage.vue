@@ -10,11 +10,7 @@
         <h1 class="site-header-1">Pick a city:</h1>
       </header>
 
-      <select>
-        <option value=''>Select a city:</option>
-        <option v-for='city in cities' :value="city">{{city.city}}</option>
-      </select>
-
+      <Cities v-for='city in cities' :load='load' :key='city.id' :city='city'/>
 
       <main class="site-content">
         <div class="hero-image">
@@ -36,9 +32,20 @@ populate with the matches -->
 
 
 <script>
+import Cities from './Cities.vue'
+
+
 export default {
+  components: {
+    Cities
+  },
+  data() {
+    return {
+      // id: this.city.id
+    }
+  },
   name: 'MainPage',
-  props: ['cities'],
+  props: ['cities', 'load'],
 }
 </script>
 
@@ -54,34 +61,29 @@ width: 100%;
 }
 .site-header {
 display: flex;
-margin: -130px 20px 0px -30px;
+height: 180px;
+margin: -50px 20px 0px -30px;
 flex-direction: column;
 text-align: center;
 justify-content: space-around;
 width: 100%;
+font-style: normal;
 font-family: Comfortaa;
 font-size: 50px;
 color: #51bbd9;
 position: fixed;
 z-index: 40;
 }
+.hero-image {
+/* position: fixed; */
+z-index: -1;
+margin: 10px 10px 10px 90px;
+}
 
-button {
-  bottom: 20px;
-  right: 680px;
-  border-width: 1px;
-  justify-content: space-around;
-  background-color: grey;
-  color: white;
-  font-family: Comfortaa;
-  font-size: 20px;
-  text-align: center;
-  position: fixed;
-  cursor: wait;
-  border-radius: 6px;
-  text-decoration: none;
-  border: none;
-  color: white;
+select {
+  width: 460px;
+  height: 40px;
+  margin: 150px 400px 0px 460px;
 }
 
 .site-footer {
@@ -91,35 +93,12 @@ border-width: 1px;
 display: flex;
 flex-direction: column;
 font-family: Comfortaa;
-font-size: 10px;
+font-size: 15px;
 text-align: center;
 bottom: 0%;
 margin-left: 0;
-width: 15%;
+width: 97%;
 }
-
-.hero-image {
-position: fixed;
-z-index: -1;
-margin-top: 15.5%;
-margin-left: 8%;
-margin-bottom: 5px;
-}
-
-/* #form {
-display: flex;
-position: fixed;
-margin: 70px 160px 120px 150px;
-background-color: grey;
-padding: 2%;
-font-family: Comfortaa;
-font-size: 25px;
-text-align: center;
-flex-direction: column;
-width: 75%;
-color: white;
-border-radius: 25px;
-} */
 
 #type {
 display: flex;
