@@ -53,12 +53,12 @@ export default {
 
 <!-- //CSS goes here -->
 <style scoped>
-body {
+/* body {
 display: flex;
 flex-direction: column;
 height: 100%;
 width: 100%;
-}
+} */
 .site-header {
 display: flex;
 height: 180px;
@@ -74,17 +74,19 @@ color: #51bbd9;
 position: fixed;
 z-index: 40;
 }
-.hero-image {
-/* position: fixed; */
-z-index: -1;
-margin: 10px 10px 10px 90px;
-}
 
-select {
-  width: 460px;
-  height: 40px;
-  margin: 150px 400px 0px 460px;
-}
+/* .site-content {
+justify-content: center;
+ height: auto;
+  width: auto;
+} */
+
+/* .img {
+  justify-content: center;
+  z-index: -5;
+  height: 100%;
+} */
+
 
 .site-footer {
 position: fixed;

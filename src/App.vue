@@ -20,7 +20,7 @@ export default {
     return {
       cities: [],
       id: [],
-      apiURL: 'http://localhost:3000/cities',
+      apiURL: 'https://warm-caverns-30232.herokuapp.com/cities',
     }
   },
   mounted() {
