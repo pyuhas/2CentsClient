@@ -14,7 +14,7 @@
 
       <main class="site-content">
         <div class="hero-image">
-          <img src="http://www.bravotv.com/sites/nbcubravotv/files/field_blog_image/2017/04/jet-set-die-on-a-plane_0.jpg" style="height:500px; width:1200px" alt="dog-pic">
+          <img src="https://www.bravotv.com/sites/nbcubravotv/files/field_blog_image/2017/04/jet-set-die-on-a-plane_0.jpg" style="height:500px; width:1200px" alt="dog-pic">
         </div>
       </main>
 
